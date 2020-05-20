@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 
-class PerformanceMetricSecondApproach:
+class PerformanceMetricNormalization:
 
         def CalculatePerformanceMetric(self,labels,predictedValueArray):
             plottingFunctions=PlottingFunctions()
@@ -108,12 +108,10 @@ class PerformanceMetricSecondApproach:
             # data save for spreadsheet
             np.savetxt("./SiameseNeuralNetworkProject/PerformanceMetric/FinalMetricSpreadSheetSecondMetric.csv", FinalMetric, delimiter=",")
 
-            print(FinalMetric)
-            print(FinalMetric.shape)
-            print(type(FinalMetric))
 
             OutputDataframe = pd.DataFrame(data=FinalMetric[0:,0:],# 1st column as index
                                            columns=allPredictionColumnsDF.columns)
+
             print(OutputDataframe.head())
             print(OutputDataframe.tail())
             OutputDataframe.to_csv("./SiameseNeuralNetworkProject/PerformanceMetric/FinalMetricSecondApproach.csv", index=False)
