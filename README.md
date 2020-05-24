@@ -66,15 +66,18 @@ Our model achieves the following performance on :
 ### Data
 
 Please Note: Github only allows files sizes of 100mb maximum, to get all datasets used in this experiment please download from here:
+https://drive.google.com/drive/folders/1xD6pKUX62nG-mP73SLS1p-FeHYbJV5Up?usp=sharing
 
 
 Original Dataset: Kaggle loan dataset filename: loan.csv
 
+cleaned Dataset: Kaggle loan dataset filename: CleanedData/outputCleanedAndNormalized.csv
+
 Algorithm suite Training Data, filename: training.csv
 
-SNN Training Data, filename:
+SNN Training Data & SNN Test Data, folder: SiameseTrainingDataPaired/
 
-SNN Test Data, filename:
+Final Embeddings: Embeddings/
 
 
 

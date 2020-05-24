@@ -17,9 +17,6 @@ from tensorflow.keras import optimizers
 from sklearn.metrics import r2_score
 import matplotlib.pyplot as plt
 from pandas.plotting import scatter_matrix
-import tensorflow_docs as tfdocs
-import tensorflow_docs.modeling
-import tensorflow_docs.plots
 from os import listdir
 from os.path import isfile, join
 
