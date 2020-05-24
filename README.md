@@ -81,7 +81,10 @@ Final Embeddings: Embeddings/
 
 
 
-### Models This code Creates
+### Models
+
+Both these models can be created by the code. To create the Siamese Algorithm Selection model, download the dataset and run the pipeline listed above.
+To run the RF baseline download the augmented dataset and run the baseline script in the rf baseline folder.
 
 Siamese Algorithm Selection
 
