@@ -19,7 +19,7 @@ class Utils:
         np.savetxt("./SiameseNeuralNetworkProject/Utils/AbsoluteErrorPerformanceRawData.csv", result, delimiter=",")
 
 
-
+        # used as dataset to train RF regressor
     def CreateAugmentedDataset(self,labels,TestLabels,PredictionArray,TestPredictionArray):
         # read in the dataset (training and test) and concat it with the prediction data
         SiameseTrainingData = pd.read_csv("./SiameseNeuralNetworkProject/MachineLearningAlgorithmSuite/CleanedData/SiameseTrainingData.csv")

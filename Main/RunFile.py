@@ -198,7 +198,7 @@ def plotSuiteOfAlgorithms():
 
 
 
-# improved metric: second approach to calculating the final metric
+# calculates normalization of raw data
 def CalculatePeformanceMetric():
         print("started second methhod of calculation")
         plottingFunctions=PlottingFunctions()
@@ -226,12 +226,12 @@ def CalculatePeformanceMetric():
         plottingFunctions.plotRankNumbers(labels,1-normalizedMetricDataframe,"Converted metric performance data")
 
 
-
+# used to find the averages of the performance and feature space, to estimate a margin for hard and easy positive and negitive
 def estimateMargins():
         trainingPairingSystem = TrainingPairingSystem()
         trainingPairingSystem.estimatePositiveANdNegitiveMargin()
 
-# new approach to pairing
+# pairing system for siamese neural network
 def createPerformancePairs(featureSpaceClose=2.5,featureSpaceFar=4.5,performanceSpaceClose=0.2,performanceSpaceFar=1.8):
     trainingPairingSystem = TrainingPairingSystem()
     trainingPairingSystem.createPairs(featureSpaceClose,featureSpaceFar,performanceSpaceClose,performanceSpaceFar)
@@ -243,7 +243,7 @@ def runNetwork():
     siameseNeuralNetwork.runNetwork()
 
 
-# this uses the embedding space and KNN to find and plot the final performance
+# uses the embedding space and KNN to find and plot the final performance
 
 def calculateKNN(neighbours=128):
     print(neighbours)

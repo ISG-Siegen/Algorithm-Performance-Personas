@@ -13,7 +13,7 @@ class EmbeddingClustering:
 
 
         #Finds nearest neighbours and their indexes
-        def ClusterEmbeddings(self,neighbours=12):
+        def ClusterEmbeddings(self,neighbours=128):
             pairsLeftTensors = genfromtxt('./SiameseNeuralNetworkProject/EmbeddingOutputSpace/TensorOutputLeftSide.csv', delimiter=',')
             pairsRightTensors = genfromtxt('./SiameseNeuralNetworkProject/EmbeddingOutputSpace/TensorOutputRightSide.csv', delimiter=',')
             TestDataTensors = genfromtxt('./SiameseNeuralNetworkProject/EmbeddingOutputSpace/OverallTestDataTensors.csv', delimiter=',')
@@ -142,7 +142,7 @@ class EmbeddingClustering:
 
                     if labelCount.count(maxCountNum) > 1:
                         if label==7:
-                            #this means two algorithms performed the exact same on the test data record the first one on index
+                            #this means two algorithms performed the exact same on the test data record the first one on index, does not happen for 128 neighbours
                             BestPerformingAlgo.append([TestIndex,loopCount,maxCountNum,labelCount.index(maxCountNum)])
                         else:
                             continue
@@ -253,7 +253,7 @@ class EmbeddingClustering:
 
 
         def getPeformanceScore(self):
-            # # compare the data. Check accuracy. check if confidence level affects results
+            # # compare the data. Check accuracy. check how ranks where needed for most often vote
 
             TestDataActualBestPerformingAlgo = genfromtxt("./SiameseNeuralNetworkProject/EmbeddingOutputSpace/TestDataActualBestPerformingAlgo.csv", delimiter=",")
             TestDataEstimatedBestPerformingAlgo = genfromtxt("./SiameseNeuralNetworkProject/EmbeddingOutputSpace/TestDataEstimatedBestPerformingAlgo.csv", delimiter=",")
@@ -307,16 +307,14 @@ class EmbeddingClustering:
             print("wrong"+str(wrong))
             print("Intra Class Accuracy/True Positives")
             print(frequencies)
-            print("Intra Class Accuracy/True Positives Wrong predictions")
-            print(frequenciesWrong)
-            print(len(frequenciesWrong))
+            print("Intra Class Accuracy/True Positive rate")
             print("True positive and false positive rate")
             for i in range(0,len(frequencies)):
                 print("Algorithm: "+ str(frequencies[i,0]))
                 print("True positive rate: "+str((int(frequencies[i,1])/plotRankActual.count(self.AlgorithmNames.index(frequencies[i,0])))*100))
                 print("False positive rate: "+str((1-(int(frequencies[i,1])/plotRankActual.count(self.AlgorithmNames.index(frequencies[i,0]))))*100))
 
-            print("Accuracy of result is: "+str((right/len(TestDataEstimatedBestPerformingAlgo))*100))
+            print("Accuracy of Most often result is: "+str((right/len(TestDataEstimatedBestPerformingAlgo))*100))
             print("Confidence in accuracy")
             uniqueLevels=np.unique(ConfidenceLevel)
             for level in uniqueLevels:
