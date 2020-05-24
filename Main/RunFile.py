@@ -247,18 +247,18 @@ def runNetwork():
 
 def calculateKNN(neighbours=128):
     print(neighbours)
-    tensorClustering=TensorClustering()
-    tensorClustering.ClusterEmbeddings(neighbours)
+    embeddingClustering=EmbeddingClustering()
+    embeddingClustering.ClusterEmbeddings(neighbours)
     calculateErrorArray()
-    tensorClustering.ConvertNearestTensorsToTrainingDataIndexes()
-    tensorClustering.ConvertTestDataToRankPredictions(neighbours)
-    tensorClustering.getActualPerformanceRank()
+    embeddingClustering.ConvertNearestTensorsToTrainingDataIndexes()
+    embeddingClustering.ConvertTestDataToRankPredictions(neighbours)
+    embeddingClustering.getActualPerformanceRank()
 
 def getFinalPerformanceScore():
-    tensorClustering=TensorClustering()
-    tensorClustering.getPerInstanceScore()
-    tensorClustering.getPeformanceScore()
-    tensorClustering.plotRanks()
+    embeddingClustering=EmbeddingClustering()
+    embeddingClustering.getPerInstanceScore()
+    embeddingClustering.getPeformanceScore()
+    embeddingClustering.plotRanks()
 
 
 def runUtilsMethod():
