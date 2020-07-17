@@ -1,0 +1,1 @@
+This folder will contain a performance measurement of the 8 algorithms used in the pipeline in terms of accuracy and time taken.

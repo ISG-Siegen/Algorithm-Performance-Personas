@@ -20,6 +20,7 @@ import pandas as pd
 from numpy import genfromtxt
 import argparse
 import random
+import time
 from os import listdir
 from os.path import isfile, join
 
@@ -149,8 +150,8 @@ def evaluateSuiteOfAlgorithms():
     randomForestRegressor = RandomForestRegression()
     lassoRegression = LassoCVRegression()
     adaBoostRegressor = AdaBoostRegression()
-    baggingRegressor = BaggingRegression()
-    extraTreeRegressor = ExtraTreeRegression()
+    #baggingRegressor = BaggingRegression()
+    #extraTreeRegressor = ExtraTreeRegression()
     rANSACRegressor = RANSACRegression()
     gradientBoostingRegressor = GradientBoostingRegression()
     trainingData = pd.read_csv("./SiameseNeuralNetworkProject/MachineLearningAlgorithmSuite/CleanedData/TrainingData.csv")
@@ -247,12 +248,13 @@ def runNetwork():
 
 def calculateKNN(neighbours=128):
     print(neighbours)
-    embeddingClustering=EmbeddingClustering()
-    embeddingClustering.ClusterEmbeddings(neighbours)
-    calculateErrorArray()
-    embeddingClustering.ConvertNearestTensorsToTrainingDataIndexes()
-    embeddingClustering.ConvertTestDataToRankPredictions(neighbours)
-    embeddingClustering.getActualPerformanceRank()
+    #embeddingClustering=EmbeddingClustering()
+    #embeddingClustering.ClusterEmbeddings(neighbours)
+    embeddingClustering.ClusterTensorsWithLabels(5)
+    # calculateErrorArray()
+    # embeddingClustering.ConvertNearestTensorsToTrainingDataIndexes()
+    # embeddingClustering.ConvertTestDataToRankPredictions(neighbours)
+    # embeddingClustering.getActualPerformanceRank()
 
 def getFinalPerformanceScore():
     embeddingClustering=EmbeddingClustering()
@@ -395,12 +397,12 @@ def main():
     if args.parser == "runpipeline":
         #splitData()
         #evaluateSuiteOfAlgorithms()
-        runSuiteOfAlgorithms()
-        CalculatePeformanceMetric()
+        #runSuiteOfAlgorithms()
+        #CalculatePeformanceMetric()
         #estimateMargins()
-        createPerformancePairs()
-        runNetwork()
-        calculateKNN()
+        #createPerformancePairs()
+        #runNetwork()
+        #calculateKNN()
         getFinalPerformanceScore()
 
 
