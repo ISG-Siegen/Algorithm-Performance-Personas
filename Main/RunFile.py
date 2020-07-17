@@ -395,14 +395,14 @@ def main():
         getFinalPerformanceScore()
 
     if args.parser == "runpipeline":
-        #splitData()
+        splitData()
         #evaluateSuiteOfAlgorithms()
-        #runSuiteOfAlgorithms()
-        #CalculatePeformanceMetric()
+        runSuiteOfAlgorithms()
+        CalculatePeformanceMetric()
         #estimateMargins()
-        #createPerformancePairs()
-        #runNetwork()
-        #calculateKNN()
+        createPerformancePairs()
+        runNetwork()
+        calculateKNN()
         getFinalPerformanceScore()
 
 
