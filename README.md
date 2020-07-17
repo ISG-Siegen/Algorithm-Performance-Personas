@@ -21,12 +21,12 @@ The Siamese selection model in this paper can be trained in one sitting or in se
 To train the pipeline in steps:
 
 ```train
-python .\RunFile.py runSuiteOfAlgorithms()
-python .\RunFile.py CalculatePeformanceMetricSecondMetric()
-python .\RunFile.py createPerformancePairs()
-python .\RunFile.py runNetwork()
-python .\RunFile.py calculateKNN()
-python .\RunFile.py getTrainingTensorIndexes()
+python .\RunFile.py runSuiteOfAlgorithms
+python .\RunFile.py CalculatePeformanceMetricSecondMetric
+python .\RunFile.py createPerformancePairs
+python .\RunFile.py runNetwork
+python .\RunFile.py calculateKNN
+python .\RunFile.py getTrainingTensorIndexes
 ```
 
 To train the entire pipeline in one command with default parameters (WARNING: Current pipeline takes several hours from start to finish):
