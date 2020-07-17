@@ -278,8 +278,8 @@ class TrainingPairingSystem:
         np.savetxt("./SiameseNeuralNetworkProject/SiameseTrainingDataPaired/pairsLeftChosenByDistance.csv", pairs1, delimiter=",")
         np.savetxt("./SiameseNeuralNetworkProject/SiameseTrainingDataPaired/pairsRightChosenByDistance.csv", pairs2, delimiter=",")
         np.savetxt("./SiameseNeuralNetworkProject/SiameseTrainingDataPaired/labelsChosenByDistance.csv", labels, delimiter=",")
-        np.savetxt("./SiameseNeuralNetworkProject/TensorOutputSpace/pairsLeftIndex.csv", pairs1IndexPositive, delimiter=",")
-        np.savetxt("./SiameseNeuralNetworkProject/TensorOutputSpace/pairsRightIndex.csv", pairs2IndexPositive, delimiter=",")
+        np.savetxt("./SiameseNeuralNetworkProject/EmbeddingOutputSpace/pairsLeftIndex.csv", pairs1IndexPositive, delimiter=",")
+        np.savetxt("./SiameseNeuralNetworkProject/EmbeddingOutputSpace/pairsRightIndex.csv", pairs2IndexPositive, delimiter=",")
         #np.savetxt("./SiameseNeuralNetworkProject/TensorOutputSpace/pairsLeftIndex.csv", pairs1IndexTotal, delimiter=",")
         #np.savetxt("./SiameseNeuralNetworkProject/TensorOutputSpace/pairsRightIndex.csv", pairs2IndexTotal, delimiter=",")
 
