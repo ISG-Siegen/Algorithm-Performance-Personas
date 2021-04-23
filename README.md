@@ -52,7 +52,7 @@ python .\RunFile.py performance
 
 Our model achieves the following performance on :
 
-### [Siamese Algorithm Selection on Kaggle Loan Dataset](https://paperswithcode.com/sota/image-classification-on-imagenet)
+### Siamese Algorithm Selection on Kaggle Loan Dataset
 
 | Model name         | MAE  | Selection Accuracy |
 | ------------------ |---------------- | -------------- |
@@ -66,7 +66,7 @@ Our model achieves the following performance on :
 ### Data
 
 Please Note: Github only allows files sizes of 100mb maximum, to get all datasets used in this experiment please download from here:
-https://drive.google.com/drive/folders/1xD6pKUX62nG-mP73SLS1p-FeHYbJV5Up?usp=sharing
+https://1drv.ms/u/s!AtfAgPR4VDcEu5Ila5QKzb5SmDSAhg?e=y7ismj
 
 Original Dataset: Kaggle loan dataset filename: loan.csv
 
