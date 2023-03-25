@@ -7,4 +7,4 @@ pandas == 0.24.2
 pandas-profiling == 2.8.0
 scipy == 1.2.2
 sklearn == 0.0
-tensorflow == 2.2.0
+tensorflow == 2.11.1
